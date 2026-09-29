@@ -116,6 +116,69 @@ Also listed: 930 095 886 / 925 184 386 (barbershop secondary)
 
 > **Convention:** Every important update lists the exact files changed so you can download only those and push to GitHub.
 
+### 2026-09-29 — Experience carousel arrows
+
+Side prev/next arrows on “A Experiência Eldo Carmo” (Kylie-style), smooth scroll by card, disabled at ends.
+
+**Barbershop**
+- `barbershop/index.html`
+- `barbershop/css/style.css`
+- `barbershop/js/main.js`
+
+**Root**
+- `README.md`
+
+### 2026-09-29 — Soft rounded buttons + full-length experience videos
+
+Buttons: soft rounded rectangles (10px radius, not full pills) matching Kylie “shop now” style — filled, no border, sentence-case.
+
+Experience videos: longer full scenes (18–26s each), no loop — play through once to the end.
+
+**Barbershop**
+- `barbershop/css/style.css`
+- `barbershop/index.html` (removed loop on experience videos)
+- `barbershop/assets/videos/exp-ambiente.mp4`
+- `barbershop/assets/videos/exp-corte.mp4`
+- `barbershop/assets/videos/exp-detalhe.mp4`
+- `barbershop/assets/videos/exp-barba.mp4`
+
+**Root**
+- `README.md`
+
+### 2026-09-29 — Experience video section
+
+Horizontal scroll “A Experiência Eldo Carmo” (Ambiente / Corte / Detalhe / Barba) right after Serviços. Tap to play, one video at a time.
+
+**Barbershop**
+- `barbershop/index.html` (experience section)
+- `barbershop/css/style.css` (experience track + cards)
+- `barbershop/js/main.js` (play/pause)
+- `barbershop/assets/videos/exp-*.mp4` *(4 clips)*
+- `barbershop/assets/videos/poster-*.webp` *(4 posters)*
+
+**Root**
+- `README.md`
+
+### 2026-09-29 — Service overlays, booking form, rounder corners
+
+Service cards: text + dark gradient over image + Agendar button (pre-fills service). Full booking form → WhatsApp. Global border-radius 14px.
+
+**Barbershop**
+- `barbershop/index.html` (overlay cards + Agendar section/form + nav)
+- `barbershop/css/style.css` (overlay styles, form-row, select, --radius: 14px)
+- `barbershop/js/main.js` (booking form + service pre-fill)
+- `barbershop/assets/images/service-*.webp` (6 service images)
+
+**Root**
+- `README.md`
+
+### 2026-09-29 — Portal mobile layout (ENTRAR clear of center logo)
+
+Glamorize block centered in the top half; bottom padding keeps ENTRAR clear of the center logo. Barbershop left as-is. Center logo slightly smaller on mobile.
+
+**Portal**
+- `portal/css/style.css` (mobile + 480px media queries)
+
 ### 2026-09-29 — Preview URLs wired up
 
 Cross-site links updated to current Cloudflare Workers preview domains.
