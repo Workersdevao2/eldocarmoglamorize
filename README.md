@@ -116,6 +116,25 @@ Also listed: 930 095 886 / 925 184 386 (barbershop secondary)
 
 > **Convention:** Every important update lists the exact files changed so you can download only those and push to GitHub.
 
+### 2026-09-30 — Glamorize “A Experiência Glamorize” section
+
+Horizontal video carousel (same pattern as Barber Shop). Six full-length reels with sound on play, posters, labels: Lavagem & Massagem · As Princesas · Lavagem + Tranças · Cacheados · Box Braids · A Equipa. Nav link “Experiência” added. Gallery remains empty (awaiting new photos).
+
+**Glamorize**
+- `glamorize/index.html`
+- `glamorize/css/style.css`
+- `glamorize/js/main.js`
+- `glamorize/assets/videos/exp-lavagem.mp4` (8.7 MB — full wash/massage reel)
+- `glamorize/assets/videos/exp-princesas.mp4`
+- `glamorize/assets/videos/exp-trancas.mp4`
+- `glamorize/assets/videos/exp-cacheados.mp4`
+- `glamorize/assets/videos/exp-boxbraids.mp4`
+- `glamorize/assets/videos/exp-equipa.mp4`
+- `glamorize/assets/videos/poster-*.webp` (6 posters)
+
+**Root**
+- `README.md`
+
 ### 2026-09-30 — Glamorize full shell parity with Barber Shop
 
 Applied E.C.B patterns to Glamorize: announce bar, header/drawer, soft buttons, hero, service overlay cards + Agendar, booking form → WhatsApp 935 627 443, gallery, Lubango CTA, footer. Lilac palette kept. No experience videos yet.
