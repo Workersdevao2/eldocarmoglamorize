@@ -69,5 +69,15 @@ Push this folder to its own GitHub repo → Cloudflare Pages
 - No experience videos (no Glamorize clips yet)
 
 ## Changelog — 2026-09-30
-- Hero upgraded: still + 2 full-length videos with dots (hero-1 before/after braids, hero-2 studio glam shoot)
-- Files: index.html, css/style.css, js/main.js, assets/videos/hero-1.mp4, hero-2.mp4, assets/images/hero-poster-1.webp, hero-poster-2.webp
+- Hero: single looping video (`hero-1.mp4`); **hero-2 removed**
+- Files: index.html, css/style.css, js/main.js, assets/videos/hero-1.mp4, assets/images/hero-poster-1.webp
+
+### 2026-09-30 — Fix Discovery dropdown hover gap
+- Dropdown no longer closes while moving the cursor onto a music link
+- Files: `barbershop/css/style.css`, `glamorize/css/style.css`
+
+### 2026-10-01 — Remove hero-2
+- Deleted `hero-2.mp4` and `hero-poster-2.webp`
+- Hero is only `hero-1.mp4` (looping); dots removed
+- Files: `index.html`, `js/main.js`, `assets/videos/hero-2.mp4` (deleted), `assets/images/hero-poster-2.webp` (deleted)
+
