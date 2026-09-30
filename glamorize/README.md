@@ -56,3 +56,7 @@ Push this folder to its own GitHub repo → Cloudflare Pages
 - Lubango recruitment CTA
 - Footer with Portal / Barber links
 - No experience videos (no Glamorize clips yet)
+
+## Changelog — 2026-09-30
+- Hero upgraded: still + 2 full-length videos with dots (hero-1 before/after braids, hero-2 studio glam shoot)
+- Files: index.html, css/style.css, js/main.js, assets/videos/hero-1.mp4, hero-2.mp4, assets/images/hero-poster-1.webp, hero-poster-2.webp
