@@ -889,3 +889,183 @@ button, input, select, textarea { font: inherit; color: inherit; }
     text-align: left;
   }
 }
+.section--experience {
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.experience-wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 1.25rem 1.75rem;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.experience-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Side arrows (Kylie-style) */
+.experience-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  transition: background var(--transition), box-shadow var(--transition), opacity var(--transition);
+}
+
+.experience-nav:hover {
+  background: #f5f5f5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+.experience-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.experience-nav--prev {
+  left: 0.5rem;
+}
+
+.experience-nav--next {
+  right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .experience-nav--prev {
+    left: 0.75rem;
+  }
+  .experience-nav--next {
+    right: 0.75rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .experience-nav--prev {
+    left: -0.25rem;
+  }
+  .experience-nav--next {
+    right: -0.25rem;
+  }
+}
+
+.experience-card {
+  position: relative;
+  flex: 0 0 min(72vw, 280px);
+  aspect-ratio: 9 / 14;
+  border-radius: var(--radius);
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: var(--line) solid var(--border);
+  background: var(--near-black);
+}
+
+@media (min-width: 768px) {
+  .experience-card {
+    flex: 0 0 min(38vw, 300px);
+  }
+}
+
+@media (min-width: 1100px) {
+  .experience-card {
+    flex: 0 0 280px;
+  }
+}
+
+.experience-card__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.experience-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.1) 45%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  transition: background var(--transition);
+  pointer-events: none;
+}
+
+.experience-card.is-playing .experience-card__overlay {
+  background: transparent;
+}
+
+.experience-card__play {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: var(--line) solid rgba(255, 255, 255, 0.65);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: border-color var(--transition), background var(--transition), opacity var(--transition);
+  padding-left: 3px; /* optical center for play triangle */
+}
+
+.experience-card__play:hover {
+  border-color: var(--gold);
+  background: rgba(201, 162, 39, 0.25);
+}
+
+.experience-card.is-playing .experience-card__play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.experience-card__label {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: var(--font-medium);
+  transition: opacity var(--transition);
+}
+
+.experience-card.is-playing .experience-card__label {
+  opacity: 0;
+}
+
+/* ========== MINI-BAR TEASER CARD ========== */
+.minibar-card {
