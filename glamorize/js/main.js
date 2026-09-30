@@ -38,54 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => closeMenu());
   });
 
-  // ---------- Hero slideshow (2 full videos) ----------
+  // ---------- Hero: single looping video ----------
   const heroVideo1 = document.getElementById('hero-video-1');
-  const heroVideo2 = document.getElementById('hero-video-2');
-  const heroDots = document.querySelectorAll('.hero__dot');
-  let heroTimer = null;
-
-  const setHeroDot = (i) => {
-    heroDots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
-  };
-
-  const hideAllHeroMedia = () => {
-    [heroVideo1, heroVideo2].forEach((v) => {
-      if (!v) return;
-      v.classList.remove('is-visible');
-      v.pause();
-      try { v.currentTime = 0; } catch (_) {}
-    });
-  };
-
-  const showHeroSlide = (i) => {
-    clearTimeout(heroTimer);
-    hideAllHeroMedia();
-    setHeroDot(i);
-
-    if (i === 0 && heroVideo1) {
-      heroVideo1.classList.add('is-visible');
-      heroVideo1.muted = true;
-      heroVideo1.play().catch(() => {});
-    } else if (i === 1 && heroVideo2) {
-      heroVideo2.classList.add('is-visible');
-      heroVideo2.muted = true;
-      heroVideo2.play().catch(() => {});
-    }
-  };
-
-  if (heroVideo1 && heroVideo2) {
-    heroVideo1.addEventListener('ended', () => showHeroSlide(1));
-    heroVideo2.addEventListener('ended', () => showHeroSlide(0));
-
-    heroDots.forEach((dot) => {
-      dot.addEventListener('click', () => {
-        const go = parseInt(dot.dataset.heroGo, 10);
-        if (!Number.isNaN(go)) showHeroSlide(go);
-      });
-    });
-
-    setHeroDot(0);
-    showHeroSlide(0);
+  if (heroVideo1) {
+    heroVideo1.muted = true;
+    heroVideo1.loop = true;
+    heroVideo1.classList.add('is-visible');
+    heroVideo1.play().catch(() => {});
   }
 
   // Service card → pre-fill booking
