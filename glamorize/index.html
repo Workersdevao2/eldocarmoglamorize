@@ -5,50 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Eldo Carmo Glamorize — Beleza & Estética premium em Luanda. Manicure, pedicure, tratamentos e mais.">
   <title>Glamorize | Eldo Carmo Beauty</title>
-  
+  <link rel="preload" href="assets/images/glamorize-model-1.webp" as="image">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/images/eldocarmoglamorizelogo.webp" type="image/webp">
 </head>
 <body>
-  <!-- HEADER -->
+  <!-- ========== ANNOUNCEMENT BAR ========== -->
+  <a class="announce-bar" href="https://youtu.be/6vzUPh26JZA?si=xl3FzxXKTsRD6NoC" target="_blank" rel="noopener">
+    Já disponível — música <strong>Tá Queimar</strong> 🔥🔥🔥 · Ouvir no YouTube
+  </a>
+
+  <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="index.html" class="header__logo">
-        <img src="assets/images/eldocarmoglamorizelogo.webp" alt="Glamorize" width="120">
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Menu principal">
-        <ul class="nav__list">
-          <li><a href="#servicos" class="nav__link">Serviços</a></li>
-          <li><a href="#galeria" class="nav__link">Galeria</a></li>
-          <li><a href="#contacto" class="nav__link">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" type="button">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
       </button>
+
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-name">Eldo Carmo Glamorize</span>
+        <span class="header__logo-sub">Beleza &amp; Estética</span>
+      </a>
+
+      <div class="header__actions" aria-hidden="true"></div>
     </div>
+
+    <nav class="header__nav" aria-label="Menu principal">
+      <a href="index.html" class="header__nav-link">Início</a>
+      <a href="#servicos" class="header__nav-link">Serviços</a>
+      <a href="#galeria" class="header__nav-link">Galeria</a>
+      <a href="#lubango" class="header__nav-link">Lubango</a>
+      <a href="#agendar" class="header__nav-link">Agendar</a>
+      <a href="https://eldocarmo.workersdevao.workers.dev" class="header__nav-link" target="_blank" rel="noopener">Portal</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- ========== LEFT MENU DRAWER ========== -->
+  <div class="menu-drawer" id="menu-drawer" aria-hidden="true">
+    <div class="menu-drawer__overlay" id="menu-overlay"></div>
+    <aside class="menu-drawer__panel" role="dialog" aria-label="Menu">
+      <div class="menu-drawer__head">
+        <span class="menu-drawer__brand">Eldo Carmo Glamorize</span>
+        <button class="menu-drawer__close" id="menu-close" aria-label="Fechar" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="menu-drawer__nav" aria-label="Menu principal">
+        <a href="index.html" class="menu-drawer__link">Início</a>
+        <a href="#servicos" class="menu-drawer__link">Serviços</a>
+        <a href="#galeria" class="menu-drawer__link">Galeria</a>
+        <a href="#lubango" class="menu-drawer__link">Lubango</a>
+        <a href="#agendar" class="menu-drawer__link">Agendar</a>
+        <a href="https://eldocarmo.workersdevao.workers.dev" class="menu-drawer__link" target="_blank" rel="noopener">Portal</a>
+        <a href="https://eldocarmobarbershop.workersdevao.workers.dev" class="menu-drawer__link" target="_blank" rel="noopener">Barber Shop</a>
+      </nav>
+
+      <div class="menu-drawer__discover">
+        <p class="menu-drawer__discover-title">Discovery</p>
+        <p class="menu-drawer__discover-sub">Johnny Berry — Tá Queimar</p>
+        <ul class="menu-drawer__music">
+          <li>
+            <a href="https://youtu.be/6vzUPh26JZA?si=xl3FzxXKTsRD6NoC" target="_blank" rel="noopener">YouTube</a>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/album/7LO9kumBSe1za71O5oKOjZ" target="_blank" rel="noopener">Spotify</a>
+          </li>
+          <li>
+            <a href="https://music.apple.com/us/album/t%C3%A1-queimar-feat-young-k-varox-007-single/6788576000" target="_blank" rel="noopener">Apple Music</a>
+          </li>
+          <li>
+            <a href="https://www.deezer.com/us/album/1023440431" target="_blank" rel="noopener">Deezer</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__media" aria-hidden="true">
+      <img class="hero__img" src="assets/images/glamorize-model-1.webp" alt="">
+    </div>
+    <div class="hero__overlay"></div>
     <div class="hero__content container">
-      <p class="hero__eyebrow">Beleza & Estética · Luanda</p>
+      <p class="hero__eyebrow">Beleza &amp; Estética · Luanda</p>
       <h1 class="hero__title">Elegância<br>que se sente</h1>
       <p class="hero__subtitle">Tratamentos premium pensados para realçar a sua beleza natural.</p>
       <div class="hero__ctas">
-        <a href="https://wa.me/244935627443?text=Olá! Gostaria de marcar um horário na Glamorize." class="btn btn--primary" target="_blank" rel="noopener">
-          Marcar Agora
-        </a>
-        <a href="#servicos" class="btn btn--ghost">Ver Serviços</a>
+        <a href="#agendar" class="btn btn--primary">Agendar sessão</a>
+        <a href="#servicos" class="btn btn--ghost btn--on-dark">Ver serviços</a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- ========== SERVICES ========== -->
   <section class="section" id="servicos">
     <div class="container">
       <header class="section__header">
@@ -58,40 +114,76 @@
       </header>
 
       <div class="services-grid">
-        <article class="service-card">
-          <h3 class="service-card__title">Manicure</h3>
-          <p class="service-card__desc">Cuidado completo das unhas das mãos com acabamento impecável.</p>
-          <p class="service-card__price">Consultar preço</p>
+        <article class="service-card" data-service="Manicure">
+          <div class="service-card__image">
+            <img src="assets/images/braids-1.webp" alt="Manicure" loading="lazy">
+          </div>
+          <div class="service-card__overlay">
+            <h3 class="service-card__title">Manicure</h3>
+            <p class="service-card__desc">Cuidado completo das unhas das mãos com acabamento impecável.</p>
+            <p class="service-card__price">Consultar preço</p>
+            <a href="#agendar" class="btn btn--service agendar-btn">Agendar</a>
+          </div>
         </article>
 
-        <article class="service-card">
-          <h3 class="service-card__title">Pedicure</h3>
-          <p class="service-card__desc">Tratamento relaxante e detalhado para os pés.</p>
-          <p class="service-card__price">Consultar preço</p>
+        <article class="service-card" data-service="Pedicure">
+          <div class="service-card__image">
+            <img src="assets/images/braids-2.webp" alt="Pedicure" loading="lazy">
+          </div>
+          <div class="service-card__overlay">
+            <h3 class="service-card__title">Pedicure</h3>
+            <p class="service-card__desc">Tratamento relaxante e detalhado para os pés.</p>
+            <p class="service-card__price">Consultar preço</p>
+            <a href="#agendar" class="btn btn--service agendar-btn">Agendar</a>
+          </div>
         </article>
 
-        <article class="service-card">
-          <h3 class="service-card__title">Unhas de Gel / Acrílico</h3>
-          <p class="service-card__desc">Alongamentos e designs personalizados com materiais premium.</p>
-          <p class="service-card__price">Consultar preço</p>
+        <article class="service-card" data-service="Unhas de Gel / Acrílico">
+          <div class="service-card__image">
+            <img src="assets/images/braids-3.webp" alt="Unhas de Gel / Acrílico" loading="lazy">
+          </div>
+          <div class="service-card__overlay">
+            <h3 class="service-card__title">Unhas de Gel / Acrílico</h3>
+            <p class="service-card__desc">Alongamentos e designs personalizados com materiais premium.</p>
+            <p class="service-card__price">Consultar preço</p>
+            <a href="#agendar" class="btn btn--service agendar-btn">Agendar</a>
+          </div>
         </article>
 
-        <article class="service-card">
-          <h3 class="service-card__title">Design de Sobrancelhas</h3>
-          <p class="service-card__desc">Modelação e realce natural do olhar.</p>
-          <p class="service-card__price">Consultar preço</p>
+        <article class="service-card" data-service="Design de Sobrancelhas">
+          <div class="service-card__image">
+            <img src="assets/images/glamorize-model-1.webp" alt="Design de Sobrancelhas" loading="lazy">
+          </div>
+          <div class="service-card__overlay">
+            <h3 class="service-card__title">Design de Sobrancelhas</h3>
+            <p class="service-card__desc">Modelação e realce natural do olhar.</p>
+            <p class="service-card__price">Consultar preço</p>
+            <a href="#agendar" class="btn btn--service agendar-btn">Agendar</a>
+          </div>
         </article>
 
-        <article class="service-card">
-          <h3 class="service-card__title">Tratamentos Faciais</h3>
-          <p class="service-card__desc">Limpeza e cuidados para uma pele radiante.</p>
-          <p class="service-card__price">Consultar preço</p>
+        <article class="service-card" data-service="Tratamentos Faciais">
+          <div class="service-card__image">
+            <img src="assets/images/team.webp" alt="Tratamentos Faciais" loading="lazy">
+          </div>
+          <div class="service-card__overlay">
+            <h3 class="service-card__title">Tratamentos Faciais</h3>
+            <p class="service-card__desc">Limpeza e cuidados para uma pele radiante.</p>
+            <p class="service-card__price">Consultar preço</p>
+            <a href="#agendar" class="btn btn--service agendar-btn">Agendar</a>
+          </div>
         </article>
 
-        <article class="service-card">
-          <h3 class="service-card__title">Maquilhagem</h3>
-          <p class="service-card__desc">Para ocasiões especiais ou o dia a dia com elegância.</p>
-          <p class="service-card__price">Consultar preço</p>
+        <article class="service-card" data-service="Maquilhagem">
+          <div class="service-card__image">
+            <img src="assets/images/braids-4.webp" alt="Maquilhagem" loading="lazy">
+          </div>
+          <div class="service-card__overlay">
+            <h3 class="service-card__title">Maquilhagem</h3>
+            <p class="service-card__desc">Para ocasiões especiais ou o dia a dia com elegância.</p>
+            <p class="service-card__price">Consultar preço</p>
+            <a href="#agendar" class="btn btn--service agendar-btn">Agendar</a>
+          </div>
         </article>
       </div>
 
@@ -99,7 +191,7 @@
     </div>
   </section>
 
-  <!-- GALLERY TEASER -->
+  <!-- ========== GALLERY ========== -->
   <section class="section section--alt" id="galeria">
     <div class="container">
       <header class="section__header">
@@ -122,82 +214,146 @@
           <img src="assets/images/braids-4.webp" alt="Tranças laterais elegantes" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="assets/images/braids-5.webp" alt="Desenho em tranças" loading="lazy">
+          <img src="assets/images/braids-5.webp" alt="Penteado Glamorize" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="assets/images/braids-6.webp" alt="Penteado infantil Glamorize" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/team.webp" alt="Equipa Glamorize by Eldo Carmo" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/glamorize-model-1.webp" alt="Trabalho Glamorize" loading="lazy">
+          <img src="assets/images/braids-6.webp" alt="Estilo Glamorize" loading="lazy">
         </div>
       </div>
 
       <div class="section__cta-wrap">
-        <a href="https://www.instagram.com/eldocarmo_glamourize_beauty/" class="btn btn--ghost" target="_blank" rel="noopener">
-          Ver no Instagram
+        <a href="https://www.instagram.com/eldo_carmo/" class="btn btn--ghost" target="_blank" rel="noopener">
+          Ver mais no Instagram
         </a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contacto">
+  <!-- ========== LUBANGO ========== -->
+  <section class="section section--lubango" id="lubango">
     <div class="container">
-      <header class="section__header">
-        <p class="section__eyebrow">Fale connosco</p>
-        <h2 class="section__title">Contacto</h2>
-        <div class="section__line"></div>
-      </header>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <h3>WhatsApp</h3>
-            <a href="https://wa.me/244935627443" target="_blank" rel="noopener">935 627 443</a>
-          </div>
-          <div class="contact-item">
-            <h3>Localização</h3>
-            <p>Centralidade do Kilamba<br>R3 · Zona Comercial · Luanda</p>
-          </div>
-          <div class="contact-item">
-            <h3>Horário</h3>
-            <p>Segunda a Domingo<br>07:00 – 21:00</p>
-          </div>
-          <div class="contact-item">
-            <h3>Redes</h3>
-            <div class="social-links">
-              <a href="https://www.instagram.com/eldocarmo_glamourize_beauty/" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://www.facebook.com/EldoCarmoBeleza" target="_blank" rel="noopener">Facebook</a>
-            </div>
-          </div>
+      <div class="lubango-card">
+        <p class="lubango-card__eyebrow">Expansão</p>
+        <h2 class="lubango-card__title">Lubango — Estamos a chegar</h2>
+        <p class="lubango-card__text">A Eldo Carmo está a reforçar a sua equipa no Lubango e quer contar contigo.</p>
+        <div class="lubango-roles">
+          <span>Técnicos de Unhas</span>
+          <span>Manicure &amp; Pedicure</span>
+          <span>Atendimento ao Público</span>
         </div>
-
-        <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" required placeholder="O seu nome">
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Como podemos ajudar?"></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary">Enviar via WhatsApp</button>
-        </form>
+        <p class="lubango-card__meta">
+          <strong>Local:</strong> Bairro Lucrécia, Lubango<br>
+          <strong>Candidaturas:</strong> recrutamento.eldocarmo@gmail.com · WhatsApp 924 071 971
+        </p>
+        <a href="https://wa.me/244924071971?text=Olá! Tenho interesse em candidatar-me para a equipa Eldo Carmo Glamorize no Lubango." class="btn btn--primary" target="_blank" rel="noopener">
+          Candidatar-me
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ========== AGENDAR ========== -->
+  <section class="section" id="agendar">
+    <div class="container">
+      <header class="section__header">
+        <p class="section__eyebrow">Reservas</p>
+        <h2 class="section__title">Agendar sessão</h2>
+        <div class="section__line"></div>
+      </header>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="booking-form">
+          <div class="form-group">
+            <label for="name">Nome *</label>
+            <input type="text" id="name" name="name" required placeholder="O seu nome" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone <span class="optional">(opcional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="9XX XXX XXX" autocomplete="tel">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="people">Nº de pessoas <span class="optional">(opcional)</span></label>
+              <input type="number" id="people" name="people" min="1" max="20" placeholder="1">
+            </div>
+            <div class="form-group">
+              <label for="service">Serviço desejado *</label>
+              <select id="service" name="service" required>
+                <option value="">Seleccione…</option>
+                <option value="Manicure">Manicure</option>
+                <option value="Pedicure">Pedicure</option>
+                <option value="Unhas de Gel / Acrílico">Unhas de Gel / Acrílico</option>
+                <option value="Design de Sobrancelhas">Design de Sobrancelhas</option>
+                <option value="Tratamentos Faciais">Tratamentos Faciais</option>
+                <option value="Maquilhagem">Maquilhagem</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Data *</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+              <label for="time">Hora *</label>
+              <input type="time" id="time" name="time" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem <span class="optional">(opcional)</span></label>
+            <textarea id="message" name="message" rows="3" placeholder="Algum detalhe adicional?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Enviar via WhatsApp</button>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-info__block">
+            <h3>Localização</h3>
+            <p>Centralidade do Kilamba<br>Bloco — salão R3, Zona Comercial<br>Luanda, Angola</p>
+          </div>
+          <div class="contact-info__block">
+            <h3>Horário</h3>
+            <p>Todos os dias · 07:00 – 21:00</p>
+          </div>
+          <div class="contact-info__block">
+            <h3>Contacto</h3>
+            <p>
+              <a href="https://wa.me/244935627443">WhatsApp 935 627 443</a><br>
+              <a href="mailto:glamorize@eldocarmo.com">glamorize@eldocarmo.com</a>
+            </p>
+          </div>
+          <div class="contact-info__social">
+            <a href="https://www.instagram.com/eldo_carmo/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/EldoCarmoBeleza" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img src="assets/images/eldocarmoglamorizelogo.webp" alt="Glamorize" width="100">
+        <span class="footer__name">Eldo Carmo Glamorize</span>
+        <span class="footer__sub">Beleza &amp; Estética</span>
       </div>
       <p class="footer__copy">© 2026 Eldo Carmo Empreendimentos. Todos os direitos reservados.</p>
-      <a href="https://eldocarmo.workersdevao.workers.dev" class="footer__link">Portal Eldo Carmo</a>
+      <div class="footer__links">
+        <a href="https://eldocarmo.workersdevao.workers.dev" target="_blank" rel="noopener">Portal</a>
+        <a href="https://eldocarmobarbershop.workersdevao.workers.dev" target="_blank" rel="noopener">Barber Shop</a>
+      </div>
     </div>
   </footer>
 
