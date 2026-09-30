@@ -35,6 +35,7 @@
     <nav class="header__nav" aria-label="Menu principal">
       <a href="index.html" class="header__nav-link">Início</a>
       <a href="#servicos" class="header__nav-link">Serviços</a>
+      <a href="#experiencia" class="header__nav-link">Experiência</a>
       <a href="#galeria" class="header__nav-link">Galeria</a>
       <a href="#lubango" class="header__nav-link">Lubango</a>
       <a href="#agendar" class="header__nav-link">Agendar</a>
@@ -59,6 +60,7 @@
       <nav class="menu-drawer__nav" aria-label="Menu principal">
         <a href="index.html" class="menu-drawer__link">Início</a>
         <a href="#servicos" class="menu-drawer__link">Serviços</a>
+        <a href="#experiencia" class="menu-drawer__link">Experiência</a>
         <a href="#galeria" class="menu-drawer__link">Galeria</a>
         <a href="#lubango" class="menu-drawer__link">Lubango</a>
         <a href="#agendar" class="menu-drawer__link">Agendar</a>
@@ -191,6 +193,101 @@
     </div>
   </section>
 
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="section section--experience" id="experiencia">
+    <div class="container">
+      <header class="section__header">
+        <p class="section__eyebrow">Por dentro</p>
+        <h2 class="section__title">A Experiência Glamorize</h2>
+        <div class="section__line"></div>
+      </header>
+    </div>
+
+    <div class="experience-wrap">
+      <button type="button" class="experience-nav experience-nav--prev" id="experience-prev" aria-label="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div class="experience-track" id="experience-track">
+        <article class="experience-card">
+          <video class="experience-card__video" poster="assets/videos/poster-lavagem.webp" playsinline preload="metadata" controlsList="nodownload">
+            <source src="assets/videos/exp-lavagem.mp4" type="video/mp4">
+          </video>
+          <div class="experience-card__overlay">
+            <button type="button" class="experience-card__play" aria-label="Reproduzir">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <p class="experience-card__label">Lavagem &amp; Massagem</p>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <video class="experience-card__video" poster="assets/videos/poster-princesas.webp" playsinline preload="metadata" controlsList="nodownload">
+            <source src="assets/videos/exp-princesas.mp4" type="video/mp4">
+          </video>
+          <div class="experience-card__overlay">
+            <button type="button" class="experience-card__play" aria-label="Reproduzir">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <p class="experience-card__label">As Princesas</p>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <video class="experience-card__video" poster="assets/videos/poster-trancas.webp" playsinline preload="metadata" controlsList="nodownload">
+            <source src="assets/videos/exp-trancas.mp4" type="video/mp4">
+          </video>
+          <div class="experience-card__overlay">
+            <button type="button" class="experience-card__play" aria-label="Reproduzir">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <p class="experience-card__label">Lavagem + Tranças</p>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <video class="experience-card__video" poster="assets/videos/poster-cacheados.webp" playsinline preload="metadata" controlsList="nodownload">
+            <source src="assets/videos/exp-cacheados.mp4" type="video/mp4">
+          </video>
+          <div class="experience-card__overlay">
+            <button type="button" class="experience-card__play" aria-label="Reproduzir">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <p class="experience-card__label">Cacheados</p>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <video class="experience-card__video" poster="assets/videos/poster-boxbraids.webp" playsinline preload="metadata" controlsList="nodownload">
+            <source src="assets/videos/exp-boxbraids.mp4" type="video/mp4">
+          </video>
+          <div class="experience-card__overlay">
+            <button type="button" class="experience-card__play" aria-label="Reproduzir">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <p class="experience-card__label">Box Braids</p>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <video class="experience-card__video" poster="assets/videos/poster-equipa.webp" playsinline preload="metadata" controlsList="nodownload">
+            <source src="assets/videos/exp-equipa.mp4" type="video/mp4">
+          </video>
+          <div class="experience-card__overlay">
+            <button type="button" class="experience-card__play" aria-label="Reproduzir">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <p class="experience-card__label">A Equipa</p>
+          </div>
+        </article>
+      </div>
+
+      <button type="button" class="experience-nav experience-nav--next" id="experience-next" aria-label="Seguinte">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </section>
+
   <!-- ========== GALLERY ========== -->
   <section class="section section--alt" id="galeria">
     <div class="container">
@@ -200,26 +297,11 @@
         <div class="section__line"></div>
       </header>
 
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="assets/images/braids-1.webp" alt="Tranças e penteados Glamorize" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/braids-2.webp" alt="Box braids Glamorize" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/braids-3.webp" alt="Cornrows artísticos" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/braids-4.webp" alt="Tranças laterais elegantes" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/braids-5.webp" alt="Penteado Glamorize" loading="lazy">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/braids-6.webp" alt="Estilo Glamorize" loading="lazy">
-        </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Add new gallery images here -->
       </div>
+
+      <p class="section__note">Novas fotos em breve.</p>
 
       <div class="section__cta-wrap">
         <a href="https://www.instagram.com/eldo_carmo/" class="btn btn--ghost" target="_blank" rel="noopener">
