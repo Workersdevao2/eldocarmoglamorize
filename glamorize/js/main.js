@@ -75,6 +75,71 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(`https://wa.me/244935627443?text=${encodeURIComponent(text)}`, '_blank');
   });
 
+  // ---------- Experience videos (full play with sound) ----------
+  document.querySelectorAll('.experience-card').forEach((card) => {
+    const video = card.querySelector('.experience-card__video');
+    const playBtn = card.querySelector('.experience-card__play');
+    if (!video || !playBtn) return;
+
+    const toggle = () => {
+      if (video.paused) {
+        document.querySelectorAll('.experience-card__video').forEach((v) => {
+          if (v !== video) {
+            v.pause();
+            v.closest('.experience-card')?.classList.remove('is-playing');
+          }
+        });
+        video.muted = false;
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {
+            video.muted = true;
+            video.play().catch(() => {});
+          });
+        }
+        card.classList.add('is-playing');
+      } else {
+        video.pause();
+        card.classList.remove('is-playing');
+      }
+    };
+
+    playBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggle();
+    });
+    card.addEventListener('click', () => toggle());
+    video.addEventListener('ended', () => {
+      card.classList.remove('is-playing');
+    });
+  });
+
+  // Experience carousel arrows
+  const expTrack = document.getElementById('experience-track');
+  const expPrev = document.getElementById('experience-prev');
+  const expNext = document.getElementById('experience-next');
+
+  if (expTrack && expPrev && expNext) {
+    const scrollByCard = (dir) => {
+      const card = expTrack.querySelector('.experience-card');
+      if (!card) return;
+      const step = card.offsetWidth + 16;
+      expTrack.scrollBy({ left: dir * step, behavior: 'smooth' });
+    };
+
+    const updateNav = () => {
+      const maxScroll = expTrack.scrollWidth - expTrack.clientWidth - 2;
+      expPrev.disabled = expTrack.scrollLeft <= 2;
+      expNext.disabled = expTrack.scrollLeft >= maxScroll;
+    };
+
+    expPrev.addEventListener('click', () => scrollByCard(-1));
+    expNext.addEventListener('click', () => scrollByCard(1));
+    expTrack.addEventListener('scroll', updateNav, { passive: true });
+    window.addEventListener('resize', updateNav);
+    updateNav();
+  }
+
   // Header scroll + announce bar
   const header = document.getElementById('header');
   const announceBar = document.querySelector('.announce-bar');
