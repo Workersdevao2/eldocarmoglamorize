@@ -1,5 +1,16 @@
 # Eldo Carmo Glamorize — eldocarmoglamorize.com
 
+### 2026-09-30 — Desktop Discovery nav (music apps on hover)
+- Added **Discovery** item to desktop nav on ECB + ECG
+- On hover / focus: dropdown with YouTube, Spotify, Apple Music, Deezer, YouTube Music (same links as mobile drawer)
+- Files changed:
+  - `barbershop/index.html`
+  - `barbershop/minibar.html`
+  - `barbershop/css/style.css`
+  - `glamorize/index.html`
+  - `glamorize/css/style.css`
+
+
 Static site for Eldo Carmo Glamorize (women’s beauty), Luanda / Lubango.  
 Pure HTML / CSS / JS — ready for Cloudflare Pages.
 
