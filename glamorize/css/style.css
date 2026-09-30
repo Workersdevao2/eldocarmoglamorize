@@ -710,31 +710,98 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .section--lubango {
   background: var(--black);
   color: #fff;
+  padding: 0;
 }
 
-.lubango-card {
-  max-width: 640px;
-  margin: 0 auto;
+.section--lubango .container {
+  max-width: 1100px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.lubango-hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+@media (min-width: 700px) {
+  .lubango-hero {
+    min-height: 560px;
+    border-radius: var(--radius);
+  }
+  .section--lubango .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.lubango-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.lubango-hero__gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(26, 18, 32, 0.94) 0%,
+    rgba(26, 18, 32, 0.72) 42%,
+    rgba(26, 18, 32, 0.35) 70%,
+    rgba(26, 18, 32, 0.15) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.lubango-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2rem 1.5rem 2.25rem;
+  color: #fff;
   text-align: center;
 }
 
-.lubango-card__eyebrow {
+@media (min-width: 600px) {
+  .lubango-hero__content {
+    padding: 2.5rem 2.5rem 2.75rem;
+    text-align: left;
+    max-width: 540px;
+  }
+}
+
+.lubango-hero__eyebrow {
   font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--lilac);
-  margin-bottom: 0.75rem;
+  color: var(--lilac, #c4a5d4);
+  margin-bottom: 0.6rem;
+  font-weight: var(--font-regular);
 }
 
-.lubango-card__title {
-  font-size: clamp(1.6rem, 4vw, 2.1rem);
-  font-weight: var(--font-light);
+.lubango-hero__title {
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.02em;
   margin-bottom: 0.85rem;
+  line-height: 1.25;
 }
 
-.lubango-card__text {
-  opacity: 0.85;
-  margin-bottom: 1.25rem;
+.lubango-hero__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 1.35rem;
 }
 
 .lubango-roles {
@@ -745,35 +812,46 @@ button, input, select, textarea { font: inherit; color: inherit; }
   margin-bottom: 1.5rem;
 }
 
+@media (min-width: 600px) {
+  .lubango-roles {
+    justify-content: flex-start;
+  }
+}
+
 .lubango-roles span {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.4rem 0.85rem;
-  border: var(--line) solid rgba(184, 160, 200, 0.4);
-  border-radius: 999px;
-  color: var(--lilac);
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(196, 165, 212, 0.55);
+  border-radius: var(--radius);
+  color: var(--lilac, #c4a5d4);
 }
 
-.lubango-card__meta {
-  font-size: 0.9rem;
+.lubango-location,
+.lubango-contact {
+  font-size: 0.85rem;
   line-height: 1.7;
-  opacity: 0.85;
-  margin-bottom: 1.5rem;
+  opacity: 0.92;
+  margin-bottom: 0.75rem;
 }
 
-.section--lubango .btn--primary {
-  background: var(--white);
-  color: var(--black);
+.lubango-hero__content .btn {
+  margin-top: 1.25rem;
+  background: #fff;
+  color: var(--black, #1a1220);
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.section--lubango .btn--primary:hover {
-  background: var(--lilac-soft);
-  color: var(--black);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+.lubango-hero__content .btn:hover {
+  background: #f0f0f0;
+  color: var(--black, #1a1220);
 }
 
-/* ========== CONTACT / AGENDAR ========== */
 .contact-grid {
   display: grid;
   gap: 3rem;
