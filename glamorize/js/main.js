@@ -38,13 +38,45 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => closeMenu());
   });
 
-  // ---------- Hero: single looping video ----------
+  // ---------- Hero: single looping video (Safari-safe autoplay) ----------
   const heroVideo1 = document.getElementById('hero-video-1');
   if (heroVideo1) {
     heroVideo1.muted = true;
+    heroVideo1.defaultMuted = true;
+    heroVideo1.playsInline = true;
+    heroVideo1.setAttribute('playsinline', '');
+    heroVideo1.setAttribute('webkit-playsinline', '');
     heroVideo1.loop = true;
     heroVideo1.classList.add('is-visible');
-    heroVideo1.play().catch(() => {});
+
+    const tryPlayHero = () => {
+      const p = heroVideo1.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          setTimeout(() => {
+            heroVideo1.muted = true;
+            heroVideo1.play().catch(() => {});
+          }, 200);
+        });
+      }
+    };
+
+    if (heroVideo1.readyState >= 2) {
+      tryPlayHero();
+    } else {
+      heroVideo1.addEventListener('loadeddata', tryPlayHero, { once: true });
+      heroVideo1.addEventListener('canplay', tryPlayHero, { once: true });
+    }
+
+    // Fallback: first user gesture (Safari autoplay policy)
+    const unlockHero = () => {
+      heroVideo1.muted = true;
+      heroVideo1.play().catch(() => {});
+      document.removeEventListener('touchstart', unlockHero);
+      document.removeEventListener('click', unlockHero);
+    };
+    document.addEventListener('touchstart', unlockHero, { once: true, passive: true });
+    document.addEventListener('click', unlockHero, { once: true });
   }
 
   // Service card → pre-fill booking
