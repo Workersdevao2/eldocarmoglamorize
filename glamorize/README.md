@@ -81,3 +81,8 @@ Push this folder to its own GitHub repo → Cloudflare Pages
 - Hero is only `hero-1.mp4` (looping); dots removed
 - Files: `index.html`, `js/main.js`, `assets/videos/hero-2.mp4` (deleted), `assets/images/hero-poster-2.webp` (deleted)
 
+### 2026-10-01 — Safari hero autoplay fix
+- Re-encoded `hero-1.mp4` as H.264 Constrained Baseline + faststart (no audio)
+- Added `autoplay`, `webkit-playsinline`, muted defaults + touch/click unlock in JS
+- Files: `index.html`, `js/main.js`, `assets/videos/hero-1.mp4`
+
